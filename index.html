@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- <div class="main"> -->
+        <div id="myModal">
+            <h1>Contact Us</h1>
+            <div class="conteiner">
+                <div class="button">
+                    <input type="submit" value="CLICK HERE" id="myBtn">
+                </div>
+            </div>
+        </div>
+        <div id="myModal2">
+            <form>
+                <div class="conteinar2">
+                    <div class="close"><i class="fa-solid fa-xmark"></i></div>
+                    <div class="name">
+                        <input type="labelline" name="name" id="name"  required   >
+                        <label for="name">Name:</label>
+                    </div>
+                    <div class="name">
+                        <input type="tele" name="number" id="number" required >
+                        <label for="number">Number:</label>
+                    </div>
+                    <div class="name">
+                        <input type="email" name="email" id="email">
+                        <label for="email">Email:</label>
+                    </div>
+                <div class="submit">
+                    <button >SUBMIT</button>
+                </div>  
+                </div>
+            </form>
+        </div>
+<!-- </div> -->
+    <script>
+        var modal = document.getElementById("myModal2");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+    
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+    
+           span.onclick = function() {
+           modal.style.display = "none";
+         }
+    
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>   
+</body>
+</html>
